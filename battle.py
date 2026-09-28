@@ -12,6 +12,8 @@ def test_factory(factory: CreatureFactory) -> None:
     for creature in (base, evolved):
         print(creature.describe())
         print(creature.attack())
+    print()
+
 
 
 def test_battle(first: CreatureFactory, second: CreatureFactory) -> None:
@@ -23,9 +25,9 @@ def test_battle(first: CreatureFactory, second: CreatureFactory) -> None:
         print(f"Factory error: {error}")
         return
     print(fighter_a.describe())
-    print(" vs.")
+    print("         vs.")
     print(fighter_b.describe())
-    print(" fight!")
+    print("         fight!!!")
     print(fighter_a.attack())
     print(fighter_b.attack())
 
@@ -34,9 +36,7 @@ def main() -> None:
     flame = FlameFactory()
     aqua = AquaFactory()
     test_factory(flame)
-    print()
     test_factory(aqua)
-    print()
     test_battle(flame, aqua)
 
 

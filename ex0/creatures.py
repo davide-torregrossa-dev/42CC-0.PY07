@@ -1,12 +1,12 @@
 from abc import ABC, abstractmethod
 
-def Creature(ABC):
+class Creature(ABC):
     def __init__(self, name: str, type: str) -> None:
         self.name = name
         self.type = type
 
     def describe(self) -> str:
-        return f"{self.name} is a {self.creature_type} type Creature"
+        return f"{self.name} is a {self.type} type Creature"
     
     @abstractmethod
     def attack(self):
