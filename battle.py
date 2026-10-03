@@ -15,7 +15,6 @@ def test_factory(factory: CreatureFactory) -> None:
     print()
 
 
-
 def test_battle(first: CreatureFactory, second: CreatureFactory) -> None:
     print("Testing battle")
     try:
